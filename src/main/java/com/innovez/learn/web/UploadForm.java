@@ -12,6 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 @SuppressWarnings("serial")
 public class UploadForm implements Serializable {
 	private String name;
+	private String description;
 	private MultipartFile file;
 
 	public String getName() {
@@ -21,6 +22,13 @@ public class UploadForm implements Serializable {
 		this.name = name;
 	}
 
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	
 	public MultipartFile getFile() {
 		return file;
 	}

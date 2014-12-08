@@ -3,16 +3,25 @@ package com.innovez.learn.backend;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * Simple descriptor of file, you can imagine this type as database row or record.
+ * 
+ * @author zakyalvan
+ */
 @SuppressWarnings("serial")
 public class FileDescriptor implements Serializable {
 	private final Long id;
 	private final String name;
+	private final String contentType;
+	private final String description;
 	private final String path;
 	private final Date uploadTimestamp;
 	
-	public FileDescriptor(String name, String path, Date uploadTimestamp) {
+	public FileDescriptor(String name, String contentType, String description, String path, Date uploadTimestamp) {
 		this.id = new Long(new Date().getTime());
 		this.name = name;
+		this.contentType = contentType;
+		this.description = description;
 		this.path = path;
 		this.uploadTimestamp = uploadTimestamp;
 	}
@@ -22,6 +31,12 @@ public class FileDescriptor implements Serializable {
 	}
 	public String getName() {
 		return name;
+	}
+	public String getContentType() {
+		return contentType;
+	}
+	public String getDescription() {
+		return description;
 	}
 	public String getPath() {
 		return path;
@@ -62,7 +77,8 @@ public class FileDescriptor implements Serializable {
 
 	@Override
 	public String toString() {
-		return "FileDescriptor [id=" + id + ", name=" + name + ", path=" + path
-				+ ", uploadTimestamp=" + uploadTimestamp + "]";
-	}
+		return "FileDescriptor [id=" + id + ", name=" + name + ", contentType="
+				+ contentType + ", description=" + description + ", path="
+				+ path + ", uploadTimestamp=" + uploadTimestamp + "]";
+	}	
 }

@@ -4,4 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean name="fileService" class="com.innovez.learn.backend.InMemoryFileService" />
+	<bean name="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename" value="resources/i18n/messages" />
+	</bean>
 </beans>

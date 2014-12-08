@@ -16,7 +16,7 @@ public class UploadValidator implements Validator {
 	public void validate(Object target, Errors errors) {
 		UploadForm form = (UploadForm) target;
 		if (form.getFile() != null && form.getFile().getSize() == 0) {
-			errors.rejectValue("file", "required.file");
+			errors.rejectValue("file", "required.fileUpload", "Uploaded file must not be null (No file selected)");
 		}
 	}
 }

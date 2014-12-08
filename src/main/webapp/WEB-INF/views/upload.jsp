@@ -9,13 +9,27 @@
 	<body>
 		<h1>Upload Form</h1>
 		<form:form commandName="fileUpload" method="post" enctype="multipart/form-data">
-			<form:errors path="*" element="div" />
-
-			<label for="name">Name</label>
-			<form:input path="name" id="name"/>
-			<label>File</label>
-			<input type="file" name="file" id="file">
-			<button type="submit">Upload</button>
+			<table>
+				<tr>
+					<td colspan="2"><form:errors path="*" element="div" /></td>
+				</tr>
+				<tr>
+					<td><label for="name">Name</label></td>
+					<td><form:input path="name" id="name"/></td>
+				</tr>
+				<tr>
+					<td><label for="name">Description</label></td>
+					<td><form:textarea path="description" id="name" rows="3"/></td>
+				</tr>
+				<tr>
+					<td><label>File</label></td>
+					<td><input type="file" name="file" id="file"></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td><button type="submit">Upload</button></td>
+				</tr>
+			</table>
 		</form:form>
 	</body>
 </html>

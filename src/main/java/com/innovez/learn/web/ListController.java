@@ -10,6 +10,11 @@ import org.springframework.web.servlet.mvc.AbstractController;
 
 import com.innovez.learn.backend.FileService;
 
+/**
+ * Just simple controller for showing list of uploaded files.
+ * 
+ * @author zakyalvan
+ */
 public class ListController extends AbstractController {
 	private static final Logger LOGGER = Logger.getLogger(ListController.class);
 	
@@ -25,5 +30,4 @@ public class ListController extends AbstractController {
 		LOGGER.debug("Handle show uploaded files list request");
 		return new ModelAndView("list", "files", fileService.getFiles());
 	}
-
 }
