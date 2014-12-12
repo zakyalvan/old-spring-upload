@@ -21,6 +21,7 @@ import com.innovez.learn.backend.FileService;
  * @author zakyalvan
  */
 public class DownloadController extends AbstractController {
+	
 	private static final Logger LOGGER = Logger.getLogger(DownloadController.class);
 	
 	private FileService fileService;
